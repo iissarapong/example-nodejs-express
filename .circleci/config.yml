@@ -31,8 +31,8 @@ jobs:
               docker push issarapong/example-nodejs-circle:${CIRCLE_SHA1}
             elif [ "${CIRCLE_BRANCH}" == "staging" ]; then
               cp Dockerfile.staging Dockerfile
-              docker build -t ima8/example-nodejs-circle-staging:latest .
-              docker push ima8/example-nodejs-circle-staging:latest
+              docker build -t issarapong/example-nodejs-circle-staging:latest .
+              docker push issarapong/example-nodejs-circle-staging:latest
             else
               echo "This is ${CIRCLE_BRANCH}"
             fi
